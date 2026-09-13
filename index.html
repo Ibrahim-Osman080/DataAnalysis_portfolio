@@ -1,518 +1,678 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahim Osman | Data Analyst &amp; Decision Intelligence</title>
+  
+  <!-- Modern Inter Font & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-<html>
-	<head>
-		<title>Ibrahim Osman Portofolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1CK5R5PDWM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            dark: {
+              900: '#0B0F19',
+              800: '#111827',
+              700: '#1F2937',
+              600: '#374151',
+            },
+            accent: {
+              cyan: '#06B6D4',
+              teal: '#14B8A6',
+              emerald: '#10B981',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
-  gtag('config', 'G-1CK5R5PDWM');
-</script>
-	<body class="is-preload">
+  <style>
+    body {
+      background-color: #0B0F19;
+      color: #E2E8F0;
+    }
+    .glass-nav {
+      background: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .project-card {
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 16px 32px -12px rgba(6, 182, 212, 0.15);
+    }
+  </style>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner"> 
-					<a href="images/Ibrahim.jpg"" class="image avatar"><img src="images/Ibrahim.jpg" alt="Personal Photo" /></a>
-					<h1>Ibrahim Osman<br />
-					</h1>
-						</h1><strong>Data Analyist<strong><br />
-						</h1>
-				</div>
-			</header>
+  <!-- Google Analytics Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CK5R5PDWM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1CK5R5PDWM');
+  </script>
+</head>
+<body class="font-sans antialiased text-slate-300 selection:bg-cyan-500/20 selection:text-cyan-300">
 
-		<!-- Main -->
-			<div id="main">
+  <!-- Sticky Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-white font-bold text-lg tracking-tight hover:text-cyan-400 transition-colors">
+        Ibrahim Osman<span class="text-cyan-400 font-mono text-sm ml-1">.data()</span>
+      </a>
+      
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Featured Projects</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Technical Stack</a>
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About &amp; Impact</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Welcome to My Portfolio<br />.</h2>
-						</header>
-						<p>I am Ibrahim Osman a Data Analyst skilled in SQL, Python, Tableau, and Power BI. Passionate about transforming raw data into actionable insights to drive informed decision-making. Experienced in data visualization, statistical analysis, and reporting. Committed to leveraging data to solve complex problems and create meaningful impact..</p>
-						
-						<!--<ul class="actions">
-							<li><a href="https://drive.google.com/file/d/1rzT0rWhRzz5kDbS7dNra4nZIqxazoP_6/view?usp=sharing" class="button">My Resume</a></li>
-						</ul> -->
-					</section>
+      <div class="flex items-center gap-3">
+        <a href="https://docs.google.com/document/d/1dFtLI47bydBB5wKSCu5yGX2xyNmRorsGqTdZFtNp7nc/edit?usp=sharing" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-dark-900 font-semibold px-4 py-2 rounded-lg text-sm hover:opacity-95 transition-opacity">
+          <i class="fa-solid fa-file-arrow-down text-xs"></i>
+          Resume
+        </a>
+      </div>
+    </div>
+  </header>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Projects :</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Data job.jpg" class="image fit thumb"><img src="images/Data proff.webp" alt="" /></a>
-								<h3> Data* Professional Survey Analysis <br/></a></h3> 
-								<p>In this project I Analyzed survey data from 630 professionals in <strong> Microsoft Power BI</strong>, covering salary trends, tech preferences, and work satisfaction in the data industry.</p>
-									<ul class="actions">
-									<li><a href="images/Data job.jpg" class="button">View the project</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Hotel 2.jpeg" class="image fit thumb"><img src="images/Hottel.webp" alt="Project 2" /></a>
-								<h3> Hotel reservation Analysis <br/></a></h3> 
-								<p>In this project I take raw housing data and transform
-									it in My SQL to make it more usable for analysis.</p>
-									<ul class="actions">
-									<li><a href="https://github.com/Ibrahim-Osman080/Da-internship-hotel-analysis-MySQL/tree/main" class="button">View the project</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Magndoco 1.png" class="image fit thumb"><img src="images/Magendoco 3.png" alt="" /></a>
-								<h3> Maji Ndogo Integrated Project
-									<br/></a></h3> 
-								<p>A multi-part Power BI project analyzing gender dynamics and crime data at shared water taps in Maji Ndogo. The project involved building relational data models, applying DAX for deeper insights, and designing a public dashboard to promote budget transparency and monitor project performance</p>
-									<ul class="actions">
-									<li><a href="images/Magndoco 5.png" class="button">View the project</a></li>
-								</ul>
-							</article>
-		
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Tablue AirBnb.png" class="image fit thumb"><img src="images/Tablue.png" alt="" /></a>
-								<h3> Tableau Dashboards<br/></a></h3> 
-								<p> Tableau Dashboards for projects on COVID 19, and AirBnb </p>
-									<ul class="actions">
-									<li><a href="https://public.tableau.com/app/profile/ibrahim.osman/viz/AirBnbFullproject_17177825124760/Dashboard1" class="button">View the project</a></li>
-								</ul>
-							</article>
-						</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Corporate 3.jpg" class="image fit thumb"><img src="images/Corporate Layoffs 2.jpg" alt="" /></a>
-								<h3> Explore rate data in Corporate<br/></a></h3> 
-								<p>In this project we use SQL to explore rate and rends in Corporate Layoffs</p>
-									<ul class="actions">
-									<li><a href="https://github.com/Ibrahim-Osman080/mysql-projects/blob/main/project-Exploratory%20Data%20Analysis.sql.sql" class="button">View the project</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Amazon2.webp" class="image fit thumb"><img src="images/Amazon2.webp" alt="" /></a>
-								<h3> Amazon Web Scraper
-									with Python <br/></a></h3> 
-								<p>In this project we scrape data from Amazon to analyze price data for products.</p>
-									<ul class="actions">
-									<li><a href="https://github.com/Ibrahim-Osman080/Python-Projects/blob/main/Amazon%20Web%20Scraper%20Project.ipynb" class="button">View the project</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/SCC project.jpg" class="image fit thumb"><img src="images/SCC resarch 2.png" alt="" /></a>
-								<h3> Research on The State of Climate Action in Sudan Post-War 
-									- Ongoing  <br/></a></h3> 
-								<p>A qualitative study with Sudan Climate Collective exploring institutional gaps, stakeholder needs, and opportunities for advancing climate action in post-war Sudan. using Dedoose for thematic analysis.</p>
-									<ul class="actions">
-									<li><a href="images/SCC project.jpg" class="button">View the project</a></li>
-								</ul>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/Cleaning 2.webp" class="image fit thumb"><img src="images/data cleaning 2.jpg" alt="Project 1" /></a>
-								<h3> Data Cleaing in SQL <br/></a></h3> 
-								<p>In this project we take raw housing data and transform
-									it in SQL Server to make it more usable for analysis.</p>
-									<ul class="actions">
-									<li><a href="https://github.com/Ibrahim-Osman080/mysql-projects/blob/main/Project%20-%20Data%20Cleaning.sql.sql" class="button">View the project</a></li>
-								</ul>
-							
-					</section>
+  <!-- Hero Section -->
+  <section id="hero" class="pt-32 pb-20 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-8 space-y-6">
+        <div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Available for Data Analytics &amp; Operational Intelligence Roles
+        </div>
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>I'm always open to discussing new projects, data analytics challenges, or collaboration opportunities. Whether you have a question, need insights, or just want to chat, feel free to reach out!.</p>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="POST" action="https://formspree.io/f/mblgzezy">
-									<input type="hidden" name="_captcha" value="false">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall">
-											<input type="text" name="name" id="name" placeholder="Name" required />
-										</div>
-										<div class="col-6 col-12-xsmall">
-											<input type="email" name="email" id="email" placeholder="Email" required />
-										</div>
-										<div class="col-12">
-											<textarea name="message" id="message" placeholder="Message" rows="4" required></textarea>
-										</div>
-										<div class="col-12">
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-				
-							
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-									Madinaty-Second New Cairo<br />
-										Cairo,<br />
-										Egypt
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										+201125028585
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:ibrahim.mo.osman08@gmail.com">ibrahim.mo.osman08@gmail.com</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
+          Transforming complex data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400">operational clarity</span>.
+        </h1>
 
-					
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
+        <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+          I'm <strong>Ibrahim Osman</strong>, a Data Analyst specializing in end-to-end data pipelines, database architecture, and executive BI dashboards. I bridge technical data engineering (SQL, Python, Power BI) with high-level operational execution, accountability systems, and decision intelligence.
+        </p>
 
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
+        <!-- Social & Quick Action -->
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#projects" class="bg-cyan-500 text-dark-900 font-semibold px-6 py-3 rounded-lg hover:bg-cyan-400 transition-colors text-sm shadow-lg shadow-cyan-500/10">
+            Explore Case Studies
+          </a>
+          <a href="#contact" class="bg-dark-800 border border-slate-700 text-slate-200 font-medium px-6 py-3 rounded-lg hover:border-slate-500 transition-colors text-sm">
+            Get in Touch
+          </a>
+          <div class="flex items-center gap-2 pl-2 text-slate-400">
+            <a href="https://github.com/Ibrahim-Osman080" target="_blank" rel="noopener" class="p-2.5 rounded-lg bg-dark-800 hover:text-cyan-400 hover:bg-dark-700 transition" aria-label="GitHub">
+              <i class="fa-brands fa-github text-lg"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ibrahim-osman-969181271/" target="_blank" rel="noopener" class="p-2.5 rounded-lg bg-dark-800 hover:text-cyan-400 hover:bg-dark-700 transition" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin text-lg"></i>
+            </a>
+            <a href="https://x.com/Ibrahim_mo_o" target="_blank" rel="noopener" class="p-2.5 rounded-lg bg-dark-800 hover:text-cyan-400 hover:bg-dark-700 transition" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+      <!-- Avatar Card -->
+      <div class="lg:col-span-4 flex justify-center">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition duration-500"></div>
+          <div class="relative bg-dark-800 border border-slate-700/80 rounded-2xl p-4 shadow-xl">
+            <img src="images/my pic1.jpg" alt="Ibrahim Osman" class="w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-300" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'" />
+            <div class="mt-4 pt-3 border-t border-slate-700/60 text-center">
+              <p class="text-white font-semibold text-sm">Ibrahim Osman</p>
+              <p class="text-xs text-slate-400 font-mono">Data Analyst | Operations &amp; Decision Intelligence</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
+    <!-- Quick Proof Metrics Bar -->
+    <div class="max-w-6xl mx-auto px-6 mt-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 rounded-xl bg-dark-800/60 border border-slate-800">
+        <div>
+          <div class="text-2xl font-bold text-white font-mono">630+</div>
+          <div class="text-xs text-slate-400 mt-0.5">Survey Cohort Data Cleaned</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-cyan-400 font-mono">8+</div>
+          <div class="text-xs text-slate-400 mt-0.5">End-to-End Analytical Pipelines</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-white font-mono">100%</div>
+          <div class="text-xs text-slate-400 mt-0.5">Reproducible Code on GitHub</div>
+        </div>
+        <div>
+          <div class="text-2xl font-bold text-teal-400 font-mono">BI + SQL</div>
+          <div class="text-xs text-slate-400 mt-0.5">Relational Modeling Core</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Curated Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Featured Data Case Studies</h2>
+          <p class="text-slate-400 mt-2 max-w-xl text-sm leading-relaxed">
+            Real data challenges broken down into executive problem statements, technical pipelines, and business outcomes.
+          </p>
+        </div>
 
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2" id="filter-container">
+          <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-medium bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 transition">All Work</button>
+          <button onclick="filterProjects('powerbi')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-dark-800 text-slate-400 border border-slate-700 hover:text-white transition">Power BI</button>
+          <button onclick="filterProjects('sql')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-dark-800 text-slate-400 border border-slate-700 hover:text-white transition">MySQL / SQL</button>
+          <button onclick="filterProjects('python')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-dark-800 text-slate-400 border border-slate-700 hover:text-white transition">Python</button>
+          <button onclick="filterProjects('tableau')" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-medium bg-dark-800 text-slate-400 border border-slate-700 hover:text-white transition">Tableau</button>
+        </div>
+      </div>
 
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
 
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
+        <!-- Project 1: Retail Sales & Profitability Dashboard (NEW) -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="powerbi">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Retail Sales Performance Dashboard.png" alt="Retail Sales Performance Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-cyan-400 border border-cyan-500/30 px-2.5 py-1 rounded text-xs font-mono">Retail Intelligence</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Retail Sales &amp; Margin Optimization Dashboard</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                An interactive executive dashboard monitoring $2.30M in revenue and $286K in profit across multi-regional retail channels, tracking product hierarchy, regional performance, and discount-margin erosion.
+              </p>
 
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">DAX aggregation measures, discount sensitivity scatter analysis, multi-attribute slicing.</span></div>
+                <div><strong class="text-slate-300">Key Insight:</strong> <span class="text-emerald-400 font-medium">Identified steep margin losses caused by discounting thresholds above 20% despite sales volume.</span></div>
+              </div>
+            </div>
 
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="images/Retail Sales Performance Dashboard.png" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> View Full Dashboard
+              </a>
+            </div>
+          </div>
+        </article>
 
-					</section>
-				-->
+        <!-- Project 2: Maji Ndogo -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="powerbi">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Magndoco 1.png" alt="Maji Ndogo Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-cyan-400 border border-cyan-500/30 px-2.5 py-1 rounded text-xs font-mono">Power BI &amp; DAX</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Maji Ndogo Public Resource &amp; Infrastructure Analysis</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                A multi-part analytical project examining gender dynamics, infrastructure failures, and community crime data around shared water access points.
+              </p>
+              
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">Star-schema modeling, DAX measures, time-series aggregation.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Provided actionable transparency for local infrastructure budget allocation.</span></div>
+              </div>
+            </div>
 
-			</div>
-		</li>
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://x.com/Ibrahim_mo_o" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/Ibrahim-Osman080" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/ibrahim-osman-969181271/" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
-						<li><a href="mailto: ibrahim.mo.osman08@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; copyright</li><li><a href="https://github.com/Ibrahim-Osman080?tab=repositories">@Ibrahim Osman</a></li>
-					</ul>
-				</div>
-			</footer>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="images/Magndoco 5.png" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> View Full Dashboard
+              </a>
+            </div>
+          </div>
+        </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Project 3: Data Professional Survey -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="powerbi">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Data proff.webp" alt="Data Professional Survey" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-cyan-400 border border-cyan-500/30 px-2.5 py-1 rounded text-xs font-mono">Survey Analytics</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Data Industry Compensation &amp; Tech Stack Survey</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Structured and analyzed raw survey data from 630 data practitioners to establish benchmarks for salary distribution, tool adoption, and job satisfaction.
+              </p>
 
-	</body>
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">Power Query ETL, missing value imputation, interactive KPI filters.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Mapped tool correlation to average compensation across regional markets.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="images/Data job.jpg" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> View Project Report
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Hotel Reservations Analysis -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="sql">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Hottel.webp" alt="Hotel Analysis" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-teal-400 border border-teal-500/30 px-2.5 py-1 rounded text-xs font-mono">MySQL CTEs</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Hospitality Booking Trends &amp; Cancellation Forecasting</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Exploratory analysis on booking databases to understand customer lead times, cancellations, and seasonal revenue variations.
+              </p>
+
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">Complex CTEs, window functions (ROW_NUMBER, RANK), aggregate joins.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Pinpointed the primary cancellation drivers to optimize deposit policy.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="https://github.com/Ibrahim-Osman080/Da-internship-hotel-analysis-MySQL/tree/main" target="_blank" rel="noopener" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-brands fa-github text-xs"></i> View SQL Repository
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Corporate Layoffs Exploration -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="sql">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Corporate Layoffs 2.jpg" alt="Corporate Layoffs" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-teal-400 border border-teal-500/30 px-2.5 py-1 rounded text-xs font-mono">SQL EDA</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Corporate Workforce Reductions &amp; Industry Volatility</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Structured exploratory data analysis tracking multinational workforce contractions, funding stages, and impact severity by sector over time.
+              </p>
+
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">Rolling totals, partition by clauses, year-over-year growth queries.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Clear timeline reconstruction showing contagion patterns between tech and retail.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="https://github.com/Ibrahim-Osman080/mysql-projects/blob/main/project-Exploratory%20Data%20Analysis.sql.sql" target="_blank" rel="noopener" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-brands fa-github text-xs"></i> View SQL Queries
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Python Amazon Scraper -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="python">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Amazon2.webp" alt="Python Web Scraper" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded text-xs font-mono">Python ETL</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Automated E-Commerce Price Monitor &amp; Pipeline</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                A scheduled Python scraper tracking real-time product pricing, cleaning dynamic HTML responses, and appending records to an archival database.
+              </p>
+
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">BeautifulSoup, Pandas, SMTP auto-alert triggers, datetime normalization.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Replaced manual price checking with autonomous scheduled log tracking.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="https://github.com/Ibrahim-Osman080/Python-Projects/blob/main/Amazon%20Web%20Scraper%20Project.ipynb" target="_blank" rel="noopener" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-brands fa-github text-xs"></i> View Jupyter Notebook
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7: Tableau Dashboards -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="tableau">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/Tablue.png" alt="Tableau Dashboards" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-cyan-400 border border-cyan-500/30 px-2.5 py-1 rounded text-xs font-mono">Tableau Public</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">AirBnb Market Metrics &amp; COVID-19 Trajectory Dashboards</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Interactive dashboards providing geospatial market comparisons for Airbnb short-term rental yields and epidemiological timelines.
+              </p>
+
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">Calculated fields, geospatial map layers, synchronized interactive filters.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Allows investors to compare bedroom count yield vs. zip code pricing live.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="https://public.tableau.com/app/profile/ibrahim.osman/viz/AirBnbFullproject_17177825124760/Dashboard1" target="_blank" rel="noopener" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Open on Tableau Public
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 8: Housing Data Cleaning Pipeline -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="sql">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/data cleaning 2.jpg" alt="Data Cleaning SQL" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-teal-400 border border-teal-500/30 px-2.5 py-1 rounded text-xs font-mono">Data Hygiene</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Production Real Estate Data Hygiene Pipeline</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Transformation of inconsistent municipal housing records into analytics-ready schemas, standardizing mixed data types and eliminating redundant records.
+              </p>
+
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">PARSENAME substrings, self-joins for NULL population, deduplication via CTEs.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Achieved complete relational consistency across addresses and property identifiers.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="https://github.com/Ibrahim-Osman080/mysql-projects/blob/main/Project%20-%20Data%20Cleaning.sql.sql" target="_blank" rel="noopener" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-brands fa-github text-xs"></i> View SQL Script
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 9: Research Study -->
+        <article class="project-card bg-dark-800/80 border border-slate-800 rounded-xl overflow-hidden flex flex-col" data-category="python">
+          <div class="h-48 overflow-hidden bg-slate-900 border-b border-slate-800 relative group">
+            <img src="images/SCC resarch 2.png" alt="Climate Action Research" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80'" />
+            <span class="absolute top-3 right-3 bg-dark-900/90 text-emerald-400 border border-emerald-500/30 px-2.5 py-1 rounded text-xs font-mono">Qualitative &amp; Mixed</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">Climate Action Governance &amp; Policy Research</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                Research study with Sudan Climate Collective evaluating institutional gaps, stakeholder constraints, and strategic pathways for post-war climate resilience.
+              </p>
+
+              <div class="bg-dark-900/60 p-3 rounded-lg border border-slate-800 space-y-1.5 text-xs mb-5 font-sans">
+                <div><strong class="text-slate-300">Methodology:</strong> <span class="text-slate-400">Qualitative thematic coding, Dedoose mixed-method matrices, literature synthesis.</span></div>
+                <div><strong class="text-slate-300">Impact:</strong> <span class="text-emerald-400 font-medium">Published foundational baseline for institutional development and policy direction.</span></div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <a href="images/SCC project.jpg" target="_blank" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> View Executive Study Overview
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stack Section -->
+  <section id="skills" class="py-24 border-b border-slate-800/80 bg-dark-900/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Technical Architecture</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Skills &amp; Toolset</h2>
+        <p class="text-slate-400 mt-2 text-sm">
+          A toolkit built around the full data lifecycle: extraction, sanitation, modeling, and executive storytelling.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="p-6 rounded-xl bg-dark-800/60 border border-slate-800">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-5">
+            <i class="fa-solid fa-database text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Querying &amp; Relational Databases</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Constructing optimized relational schemas, complex joins, subqueries, and window functions to query high-volume records with speed and data integrity.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">MySQL</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">SQL Server</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">CTEs &amp; Window Fns</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Schema Design</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-6 rounded-xl bg-dark-800/60 border border-slate-800">
+          <div class="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 mb-5">
+            <i class="fa-solid fa-chart-line text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">BI &amp; Executive Dashboards</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Building intuitive, self-service decision engines with responsive filtering, clean design systems, and DAX calculations for leadership teams.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Microsoft Power BI</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">DAX Measures</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Tableau Desktop</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-6 rounded-xl bg-dark-800/60 border border-slate-800">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
+            <i class="fa-brands fa-python text-lg"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Python &amp; Operational Pipelines</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Automating ingestion scripts, handling data collection logistics, cleaning survey batches, and deploying reproducible notebooks.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Python (Pandas)</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">BeautifulSoup</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Jupyter</span>
+            <span class="px-2.5 py-1 rounded bg-dark-900 text-slate-300 border border-slate-700 text-xs font-mono">Git &amp; GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 border-b border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="p-8 md:p-12 rounded-2xl bg-dark-800 border border-slate-800 relative">
+        <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Background &amp; Philosophy</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1 mb-6">Analytical rigor meets practical operations.</h2>
+        
+        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+          <p>
+            I view data as an organization’s central nervous system. Clean queries and well-architected pipelines aren't merely technical exercises—they directly eliminate operational blind spots, streamline resource deployment, and guide high-stakes executive decisions.
+          </p>
+          <p>
+            My background is deeply grounded in connecting operational leadership with quantitative precision. Having structured operational workflows and monitoring, evaluation, accountability, and learning (MEAL) frameworks across complex, multi-stakeholder initiatives, I prioritize data hygiene from the ground up: verified data ingestion, reliable relational schemas, and dashboards that leadership can act upon with confidence.
+          </p>
+          <p>
+            Whether engineering SQL data cleaning pipelines, writing automated Python scrapers, or designing self-service Power BI reports, my goal is always consistent: replace assumptions with verified, actionable intelligence.
+          </p>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-700/60 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <div class="text-white font-semibold text-sm">Location &amp; Availability</div>
+            <div class="text-slate-400 text-xs">Maadi, Cairo, Egypt &bull; Available for Remote Roles Worldwide</div>
+          </div>
+          <a href="https://docs.google.com/document/d/1dFtLI47bydBB5wKSCu5yGX2xyNmRorsGqTdZFtNp7nc/edit?usp=sharing" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 hover:text-cyan-300 font-mono">
+            Download Full Curriculum Vitae <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-mono uppercase tracking-wider text-cyan-400 font-semibold">Get in Touch</span>
+          <h2 class="text-3xl font-bold text-white">Let's discuss your next data challenge.</h2>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            I am always open to discussing new projects, contract opportunities, full-time roles, or data analysis collaborations. Drop a message and I'll get back to you promptly.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-dark-800 border border-slate-700 flex items-center justify-center text-cyan-400">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-mono">Email</div>
+                <a href="mailto:ibrahim.mo.osman08@gmail.com" class="text-sm font-medium text-white hover:text-cyan-400 transition">
+                  ibrahim.mo.osman08@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-dark-800 border border-slate-700 flex items-center justify-center text-teal-400">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-mono">Phone / WhatsApp</div>
+                <a href="tel:+201515086116" class="text-sm font-medium text-white hover:text-cyan-400 transition">
+                  +20 151 508 6116
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-lg bg-dark-800 border border-slate-700 flex items-center justify-center text-emerald-400">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-mono">Location</div>
+                <div class="text-sm font-medium text-white">
+                  Maadi, Cairo, Egypt
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-7">
+          <form method="POST" action="https://formspree.io/f/mblgzezy" class="p-8 rounded-2xl bg-dark-800 border border-slate-800 space-y-4">
+            <input type="hidden" name="_captcha" value="false">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-xs font-mono text-slate-400 mb-1.5">Your Name</label>
+                <input type="text" name="name" id="name" required placeholder="Jane Doe" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" />
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-mono text-slate-400 mb-1.5">Your Email</label>
+                <input type="email" name="email" id="email" required placeholder="jane@company.com" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" />
+              </div>
+            </div>
+
+            <div>
+              <label for="subject" class="block text-xs font-mono text-slate-400 mb-1.5">Subject</label>
+              <input type="text" name="subject" id="subject" placeholder="Project Inquiry / Job Opportunity" class="w-full bg-dark-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition" />
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-mono text-slate-400 mb-1.5">Message</label>
+              <textarea name="message" id="message" rows="4" required placeholder="Tell me about your dataset, project scope, or opportunity..." class="w-full bg-dark-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500 transition"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-teal-500 text-dark-900 font-bold py-3 rounded-lg text-sm hover:opacity-95 transition shadow-lg shadow-cyan-500/10">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-800 bg-dark-900 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        &copy; 2026 Ibrahim Osman. Engineered for decision intelligence.
+      </div>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="https://github.com/Ibrahim-Osman080" target="_blank" rel="noopener" class="hover:text-cyan-400 transition" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ibrahim-osman-969181271/" target="_blank" rel="noopener" class="hover:text-cyan-400 transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://x.com/Ibrahim_mo_o" target="_blank" rel="noopener" class="hover:text-cyan-400 transition" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="mailto:ibrahim.mo.osman08@gmail.com" class="hover:text-cyan-400 transition" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Project Filtering Script -->
+  <script>
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update button styles
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40');
+        btn.classList.add('bg-dark-800', 'text-slate-400', 'border-slate-700');
+      });
+
+      // Highlight clicked button
+      const activeBtn = Array.from(buttons).find(b => b.getAttribute('onclick').includes(category));
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-cyan-500/20', 'text-cyan-300', 'border-cyan-500/40');
+        activeBtn.classList.remove('bg-dark-800', 'text-slate-400', 'border-slate-700');
+      }
+
+      // Filter cards
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
 </html>
